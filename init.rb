@@ -11,11 +11,15 @@ class Window < Gosu::Window
   def initialize
     super(1280, 720, false)
     self.caption = "FPS"
-    @map = Map.new(self, "map.png", "tileset.png", "walls.png")
+    @map = Map.new( self,
+                    "assets/map.png",
+                    "assets/tileset.png",
+                    "assets/walls.png" )
+
     @camera = Camera.new(self)
-    @aim = Gosu::Image.new(self, "aim.png", true)
-    @character_minimap = Gosu::Image.new(self, "character_minimap.png", true)
-    @map_bg = Gosu::Image.new(self, "map_bg.png", true)
+    @aim = Gosu::Image.new(self, "assets/aim.png", true)
+    @character_minimap = Gosu::Image.new(self, "assets/character_minimap.png", true)
+    @map_bg = Gosu::Image.new(self, "assets/map_bg.png", true)
   end
 
   def button_down(id)

@@ -1,0 +1,18 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    gosu (0.7.45)
+    opengl (0.7.0)
+    texplay (0.4.3)
+      gosu (>= 0.7.25)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  gosu (= 0.7.45)
+  opengl (= 0.7.0)
+  texplay (= 0.4.3)
+
+BUNDLED WITH
+   1.10.6

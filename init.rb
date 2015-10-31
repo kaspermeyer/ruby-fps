@@ -17,11 +17,11 @@ class Window < Gosu::Window
 		@character_minimap = Gosu::Image.new(self, "character_minimap.png", true)
 		@map_bg = Gosu::Image.new(self, "map_bg.png", true)
 	end
-	
+
 	def button_down(id)
 		exit if id == Gosu::KbEscape
 	end
-	
+
 	def draw_minimap
 		chara_color = Gosu::Color.new(128, 0, 255, 0)
 		map_color = Gosu::Color.new(128, 255, 255, 255)
@@ -35,22 +35,22 @@ class Window < Gosu::Window
 				angle = @camera.horizontal_angle + 90.0
 				x_map = x - @camera.position.x - 0.1
 				y_map = y - @camera.position.z + 0.05
-					
+
 				@map.map_texture.draw(x_map, y_map, 0, 1, 1, map_color)
 				@character_minimap.draw_rot(x, y, z, angle, 0.5, 0.8, 1, 1, chara_color)
 			end
 		end
 	end
-	
+
 	def draw
 		gl do
 			@camera.look
 			@map.draw
 		end
-		@aim.draw((self.width + @aim.width) / 2, (self.height + @aim.height) / 2, 0)
+		@aim.draw((self.width / 2) - (@aim.width / 2), (self.height / 2) - (@aim.height / 2), 0)
 		draw_minimap
 	end
-	
+
 	def update
 		@camera.update
 	end

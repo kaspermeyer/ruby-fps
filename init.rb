@@ -9,7 +9,7 @@ Gosu::enable_undocumented_retrofication
 class Window < Gosu::Window
   attr_reader :camera, :map
   def initialize
-    super(1280, 720, false)
+    super(640, 480, false)
     self.caption = "FPS"
     @map = Map.new( self,
                     "assets/map.png",
@@ -51,7 +51,7 @@ class Window < Gosu::Window
       @camera.look
       @map.draw
     end
-    @aim.draw((self.width / 2) - (@aim.width / 2), (self.height / 2) - (@aim.height / 2), 0)
+    @aim.draw((self.width / 2) - (@aim.width / 2), (self.height / 2) - (@aim.height / 2), 0, 0.8, 0.8)
     draw_minimap
   end
 

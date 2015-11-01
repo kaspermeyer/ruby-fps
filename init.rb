@@ -9,8 +9,8 @@ Gosu::enable_undocumented_retrofication
 class Window < Gosu::Window
   attr_reader :camera, :map
   def initialize
-    super(640, 480, false)
-    self.caption = "FPS"
+    super(1280, 720, false)
+    self.caption = "Ruby FPS"
     @map = Map.new( self,
                     "assets/map.png",
                     "assets/tileset.png",

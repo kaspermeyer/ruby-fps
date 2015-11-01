@@ -17,7 +17,7 @@ class Camera
     @mouse_sensitivity = 0.1
 
     @on_ground = false
-    @gravity = -0.01
+    @gravity = -0.0075
     @velocity_y = 0.0
 
     adjust_target
@@ -143,14 +143,14 @@ class Camera
 
   def apply_force
     if @on_ground
-      @velocity_y = 0.2
+      @velocity_y = 0.15
       @on_ground = false
     end
   end
 
   def reset_velocity
-    if @velocity_y > 0.1
-      @velocity_y = 0.1
+    if @velocity_y > 0.08
+      @velocity_y = 0.08
     end
   end
 end

@@ -14,7 +14,7 @@ class Camera
     @collision_box = Box2D.new(Vector3D.new(@position.x - 0.5, @position.y, @position.z - 0.5), 1.0, 1.0)
     @parent_window.mouse_x, @parent_window.mouse_y = @parent_window.width / 2, @parent_window.height / 2
     @last_mouse_x, @last_mouse_y = @parent_window.mouse_x, @parent_window.mouse_y
-    @mouse_sensitivity = 0.04
+    @mouse_sensitivity = 0.1
 
     @on_ground = false
     @gravity = -0.01
@@ -79,8 +79,8 @@ class Camera
       @last_mouse_y = @parent_window.mouse_y
     end
 
-    @vertical_angle = -35.0 if @vertical_angle < -35.0
-    @vertical_angle = 35.0 if @vertical_angle > 35.0
+    @vertical_angle = -90.0 if @vertical_angle < -90.0
+    @vertical_angle = 90.0 if @vertical_angle > 90.0
 
     # collision check
     @collision_box.origin.x = @position.x - 0.5

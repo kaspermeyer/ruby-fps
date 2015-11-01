@@ -51,7 +51,7 @@ class Window < Gosu::Window
       @camera.look
       @map.draw
     end
-    @aim.draw((self.width / 2) - (@aim.width / 2), (self.height / 2) - (@aim.height / 2), 0)
+    @aim.draw((self.width / 2) - (@aim.width / 2), (self.height / 2) - (@aim.height / 2), 0, 0.8, 0.8)
     draw_minimap
   end
 

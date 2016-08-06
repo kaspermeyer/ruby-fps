@@ -11,5 +11,3 @@ Rakefile is included for those who wants to make their own builds. Pre-compiled 
 * OSX: `rake build:osx:app`
 
 If you're on OSX or Linux and still want to target Windows, use `rake build:windows:wrapped` to build.
-
-Credit goes to solidboko.
